@@ -27,3 +27,26 @@ __pycache__/
 # Database
 *.db
 *.sqlite3
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venvv/
+
+# Logs
+logs/
+*.log
+
+# Test artifacts
+.pytest_cache/
+
+# OS files
+*.lnk
+
+# Environment
+.env
+
+# Database
+*.db
