@@ -1,86 +1,57 @@
 # Mental Health Safety Analyzer
 
-[![Tests](https://github.com/AziziArya/Mental-Health-Safety-Analyzer/actions/workflows/test.yml/badge.svg)](https://github.com/AziziArya/Mental-Health-Safety-Analyzer/actions)
-
 An AI-powered mental health conversation safety analysis system designed
 to detect emotional distress, crisis signals, conversation
 deterioration, and generate explainable safety decisions.
 
-This project is a research prototype focused on privacy-aware AI
-assistance for mental health safety monitoring. It supports human review
-and does not replace professional mental health care.
+This research prototype focuses on privacy-aware AI assistance for
+mental health safety monitoring. It supports human review and does not
+replace professional mental health care.
 
-## Features
+## Documentation
 
--   Emotion analysis subsystem
--   Distress level detection
--   Crisis phrase detection
--   Conversation risk escalation analysis
--   Context fusion engine
+Detailed documentation is available in the `docs/` directory:
+
+-   architecture.md
+-   pipeline.md
+-   models_and_ai.md
+-   privacy_and_safety.md
+-   testing_and_evaluation.md
+-   api_documentation.md
+-   release_notes.md
+-   future_improvements.md
+
+## Main Capabilities
+
+-   Emotion analysis
+-   Distress detection
+-   Crisis signal detection
+-   Risk escalation analysis
+-   Context fusion
 -   Safety decision engine
--   Explainable AI (XAI) reports
+-   Explainable AI reports
 -   Privacy guard layer
--   Automated safety response generation
-
-## System Architecture
-
-Emotion Analyzer
-
-↓
-
-Distress Detector
-
-↓
-
-Crisis Detector
-
-↓
-
-Conversation Pattern Analyzer
-
-↓
-
-Context Fusion Engine
-
-↓
-
-Decision Engine
-
-↓
-
-Safety Response Generator
-
-↓
-
-Explainability Report
+-   Safety response generation
 
 ## Installation
 
-Clone repository:
-
+``` bash
 git clone https://github.com/AziziArya/Mental-Health-Safety-Analyzer.git
-
-Install dependencies:
-
 pip install -r requirements.txt
+```
 
 ## Testing
 
 Run:
 
+``` bash
 pytest -v
+```
 
 Current status:
 
-12/12 tests passed
-
-Coverage:
-
-80%
-
-Run coverage:
-
-pytest --cov=src --cov-report=term-missing
+    12/12 tests passed
+    Coverage: 80%
 
 ## Technology Stack
 
@@ -88,8 +59,8 @@ pytest --cov=src --cov-report=term-missing
 -   FastAPI
 -   PyTorch
 -   TensorFlow
--   Scikit-learn
 -   Transformers
+-   Scikit-learn
 -   Pandas
 -   NumPy
 -   SQLAlchemy
@@ -97,11 +68,8 @@ pytest --cov=src --cov-report=term-missing
 
 ## Limitations
 
-This system:
-
--   Does not provide medical diagnosis.
--   Does not replace professional support.
--   Requires human review for high-risk cases.
+This system: - Does not provide medical diagnosis. - Does not replace
+professional support. - Requires human review for high-risk cases.
 
 ## Release
 
@@ -109,14 +77,9 @@ Current stable release:
 
 v1.0.0
 
-Included:
-
--   Complete AI safety analysis pipeline
--   Crisis detection
--   Conversation escalation detection
--   Context fusion
--   Explainable AI output
--   Automated safety response generation
+Included: - Complete AI safety analysis pipeline - Crisis detection -
+Conversation escalation detection - Context fusion - Explainable AI
+output - Automated safety response generation
 
 ## License
 
