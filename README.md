@@ -1,5 +1,7 @@
 # Mental Health Safety Analyzer
 
+[![Tests](https://github.com/AziziArya/Mental-Health-Safety-Analyzer/actions/workflows/test.yml/badge.svg)](https://github.com/AziziArya/Mental-Health-Safety-Analyzer/actions)
+
 An AI-powered mental health conversation safety analysis system designed
 to detect emotional distress, crisis signals, conversation
 deterioration, and generate explainable safety decisions.
