@@ -1,277 +1,305 @@
-# Mental Health Safety Analyzer — System Architecture
+# System Architecture
 
-## Project Goal
+## Overview
 
-Build an AI-powered system that analyzes anonymous mental-health conversations, detects emotional changes, estimates distress and crisis risk, explains its decisions, and generates a structured safety report.
+Mental Health Safety Analyzer is a privacy-aware AI system designed to
+analyze anonymous mental health conversations and identify emotional
+distress, crisis indicators, and changes in conversation risk over time.
 
----
+The project is designed as a modular pipeline where each component
+performs a specific analysis task. The final decision is created by
+combining multiple signals instead of relying on a single prediction.
 
-# High-Level Pipeline
+The system is not a medical diagnosis tool. It is a safety assistance
+prototype designed to support monitoring, early warning, and human
+review.
 
-Conversation Input
-↓
-Privacy Guard
-↓
-Emotion Analyzer
-↓
-Distress Detector
-↓
-Crisis Detector
-↓
-Decision Fusion Engine
-↓
-Risk Scoring Engine
-↓
-Explainable AI (XAI)
-↓
-Safety Report Generator
-↓
-Interactive Dashboard
+------------------------------------------------------------------------
 
----
+# High-Level Architecture
 
-# AI Modules
+The complete processing flow is:
 
-## 1. Privacy Guard
+    Conversation Input
 
-Purpose: Remove or anonymize personally identifiable information (PII).
+            ↓
 
-Detect and anonymize:
+    Privacy Guard Layer
 
-* Names
-* Phone numbers
-* Emails
-* Addresses
-* IDs and other sensitive information
+            ↓
 
-Planned tools:
+    Text Preprocessing
 
-* Microsoft Presidio
-* Piiranha
+            ↓
 
-Example:
-Input: “My name is Ali and my phone is 0912...”
-Output: “My name is [NAME] and my phone is [PHONE]”
+    Emotion Analysis Module
 
----
+            ↓
 
-## 2. Emotion Analyzer
+    Distress Detection Module
 
-Purpose: Detect multiple emotions in each message.
+            ↓
 
-Model: SamLowe/roberta-base-go_emotions
+    Crisis Detection Module
 
-Output example:
+            ↓
 
-* Sadness: 0.82
-* Fear: 0.41
-* Anger: 0.12
-* Joy: 0.05
+    Conversation Pattern Analyzer
 
-Supports:
+            ↓
 
-* Emotion evolution
-* Emotional heatmap
-* Conversation fingerprint
+    Context Fusion Engine
 
----
+            ↓
 
-## 3. Distress Detector
+    Risk Decision Engine
 
-Purpose: Estimate psychological distress severity.
+            ↓
 
-Planned model: Distress / sentiment model (CPU-friendly).
+    Explainable AI Report Generator
 
-Output example:
+            ↓
 
-* Low: 0.10
-* Medium: 0.25
-* High: 0.65
+    Safety Dashboard / API Output
 
----
+------------------------------------------------------------------------
 
-## 4. Crisis Detector
+# Component Description
 
-Purpose: Detect self-harm or suicide-related risk.
+## 1. Conversation Input Layer
 
-Planned model: sentinetyd/suicidal-bert
+This layer receives the conversation data that needs to be analyzed.
 
-Output example:
+Input examples:
 
-* Crisis probability: 0.91
-* Emergency: True
+-   User messages
+-   Anonymous conversation logs
+-   Chat-based interactions
 
----
+The input layer is responsible for preparing raw conversation data
+before analysis.
 
-# Conversation Pattern Analysis
+------------------------------------------------------------------------
 
-This module is rule-based and statistical (no separate model required).
+## 2. Privacy Guard Layer
 
-Features:
+Privacy protection is one of the main requirements of the project.
 
-* Sudden emotion changes
-* Increasing negative language
-* Message length changes
-* Repeated hopeless statements
-* Conversation stability score
+Before any AI analysis happens, sensitive information is detected and
+removed.
 
----
+The privacy layer can identify:
 
-# Decision Fusion Engine
+-   Names
+-   Phone numbers
+-   Email addresses
+-   Addresses
+-   Identification numbers
+-   Other personally identifiable information
 
-Combine outputs from all AI models.
+The goal is to allow analysis while reducing privacy risks.
 
-Inputs:
+------------------------------------------------------------------------
 
-* Emotion scores
-* Distress probability
-* Crisis probability
-* Pattern-analysis features
+## 3. Text Preprocessing Layer
 
-Output:
+This module prepares the text for AI models.
 
-* Unified risk score (0–100)
-* Confidence score
+Main operations:
 
----
+-   Cleaning unnecessary characters
+-   Normalizing text
+-   Preparing model input
+-   Tokenization
 
-# Multi-Level Risk Analysis
+This step ensures that the input format is compatible with the analysis
+models.
 
-Risk levels:
+------------------------------------------------------------------------
 
-* Safe
-* Mild Concern
-* Moderate Risk
-* High Risk
-* Critical Emergency
+## 4. Emotion Analysis Module
 
-Example:
+The emotion analysis component studies emotional signals inside the
+conversation.
 
-* Emotion sadness > 0.8
-* Distress > 0.7
-* Crisis > 0.8
-  → Critical Emergency
+Detected emotional states may include:
 
----
+-   Sadness
+-   Fear
+-   Anger
+-   Happiness
+-   Hopelessness
+-   Emotional instability
 
-# Explainable AI (XAI)
+Instead of analyzing a single message, the system can evaluate emotional
+changes throughout the conversation.
 
-The system must explain why a prediction was made.
+------------------------------------------------------------------------
 
-Example:
+## 5. Distress Detection Module
 
-* High hopelessness indicators
-* Isolation language detected
-* Self-harm keywords detected
-* Strong negative emotion trend
+This module focuses on identifying signs of emotional difficulty.
 
-Planned tools:
+Examples:
 
-* Attention visualization
-* SHAP (future)
-* Keyword extraction
+-   High stress indicators
+-   Severe sadness
+-   Isolation signals
+-   Loss of motivation
+-   Emotional deterioration
 
----
+The output is a distress level estimation.
 
-# Human Review Mode
+------------------------------------------------------------------------
 
-If confidence is low, the system will not make a final automated decision.
+## 6. Crisis Detection Module
 
-Example:
+The crisis detector searches for stronger safety-related signals.
 
-* Confidence < 0.60
-* Risk near threshold
-  → “Requires Human Review”
+Examples:
 
----
+-   Self-harm related expressions
+-   Emergency situations
+-   Extreme hopelessness
+-   Dangerous escalation patterns
 
-# Safety Report Generator
+The goal is early identification of high-risk conversations.
 
-The final report should contain:
+------------------------------------------------------------------------
 
-* Risk level
-* Confidence score
-* Emotion timeline
-* Crisis factors
-* Explanation of the decision
-* Conversation summary
-* Recommended action
+## 7. Conversation Pattern Analyzer
 
----
+This module analyzes the overall structure of the conversation.
 
-# Dashboard (Future UI)
+Important signals:
 
-Planned visual components:
+-   Emotional trend
+-   Message length changes
+-   Repeated negative patterns
+-   Sudden tone changes
+-   Increasing risk over time
 
-* Risk meter
-* Emotion timeline chart
-* Emotional heatmap
-* Confidence indicator
-* Crisis-factor panel
-* AI reasoning panel
-* Exportable safety report
+This allows the system to understand conversation evolution instead of
+isolated sentences.
 
----
+------------------------------------------------------------------------
 
-# Backend Stack
+## 8. Context Fusion Engine
 
-Planned technologies:
+Different AI modules produce different signals.
 
-* Python 3.11+
-* FastAPI
-* Transformers
-* PyTorch (CPU inference)
-* Pandas / NumPy
-* Uvicorn
+The context fusion engine combines:
 
----
+-   Emotion results
+-   Distress score
+-   Crisis indicators
+-   Conversation patterns
+-   Confidence values
 
-# Frontend Stack (Planned)
+The purpose is to create a more reliable final understanding.
 
-Option 1 (faster):
+------------------------------------------------------------------------
 
-* Streamlit
+## 9. Risk Decision Engine
 
-Option 2 (more professional):
+This module converts all collected information into a final safety
+decision.
 
-* React + FastAPI
+Possible outputs:
 
----
+-   Safe
+-   Mild Concern
+-   Moderate Risk
+-   High Risk
+-   Critical Emergency
 
-# Deployment Strategy
+The decision engine also considers model confidence and uncertainty.
 
-Local development: CPU-only inference.
+------------------------------------------------------------------------
 
-Future options:
+## 10. Explainable AI Report Generator
 
-* HuggingFace Spaces
-* Render
-* Railway
-* VPS with GPU (only if future fine-tuning is needed)
+The system should not only provide a result.
 
----
+It should explain why the decision was made.
 
-# Current Development Phase
+Generated explanations may include:
 
-Phase 1 — Model acquisition and inference testing.
+-   Important detected signals
+-   Emotional changes
+-   Risk factors
+-   Confidence score
+-   Recommended next action
 
-Immediate tasks:
+This improves transparency and trust.
 
-1. Download emotion model
-2. Download distress model
-3. Download crisis model
-4. Download privacy model
-5. Verify inference on sample conversations
-6. Implement Fusion Engine
-7. Build FastAPI backend
-8. Build interactive dashboard
+------------------------------------------------------------------------
 
----
+# API Architecture
 
-# Notes
+The backend service is built to expose analysis functionality through
+APIs.
 
-* The system is NOT a medical diagnostic tool.
-* All outputs are decision-support signals.
-* High-risk conversations should be flagged for human review.
-* Privacy protection must happen before any AI analysis.
-* The architecture is modular so each model can be replaced independently in the future.
+Main responsibilities:
+
+-   Receive conversation data
+-   Execute the analysis pipeline
+-   Return structured safety results
+-   Provide explainable outputs
+
+Technology:
+
+-   FastAPI
+-   Python
+-   AI inference modules
+
+------------------------------------------------------------------------
+
+# Design Principles
+
+## Modular Design
+
+Each component is separated to allow:
+
+-   Easier development
+-   Independent testing
+-   Future model replacement
+-   Better maintainability
+
+------------------------------------------------------------------------
+
+## Privacy First
+
+The system prioritizes:
+
+-   Anonymous processing
+-   Data minimization
+-   Protection of sensitive information
+
+------------------------------------------------------------------------
+
+## Explainability
+
+Every important decision should provide understandable reasons.
+
+The system avoids becoming a black-box classifier.
+
+------------------------------------------------------------------------
+
+## Human Review Support
+
+For uncertain or high-risk cases, the system supports human evaluation
+instead of fully automated decisions.
+
+------------------------------------------------------------------------
+
+# Future Architecture Expansion
+
+Possible future improvements:
+
+-   Multi-model AI fusion
+-   Advanced transformer-based models
+-   Real-time monitoring dashboard
+-   Fairness evaluation module
+-   Human review workflow
+-   Better risk prediction models
