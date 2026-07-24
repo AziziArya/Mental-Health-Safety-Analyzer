@@ -1,6 +1,5 @@
 from src.pipeline.analyzer import MentalHealthAnalyzer
 
-
 text = """
 I feel completely hopeless.
 Nobody understands me.

@@ -32,10 +32,14 @@ class CrisisDetector:
         text_lower = text.lower()
 
         high_matches = [
-            pattern for pattern in self.high_risk_patterns if re.search(pattern, text_lower)
+            pattern
+            for pattern in self.high_risk_patterns
+            if re.search(pattern, text_lower)
         ]
         medium_matches = [
-            pattern for pattern in self.medium_risk_patterns if re.search(pattern, text_lower)
+            pattern
+            for pattern in self.medium_risk_patterns
+            if re.search(pattern, text_lower)
         ]
 
         if high_matches:

@@ -1,5 +1,6 @@
+from typing import Dict, List
+
 from transformers import pipeline
-from typing import List, Dict
 
 
 class EmotionAnalyzer:

@@ -1,5 +1,6 @@
-from transformers import pipeline
 from typing import Dict
+
+from transformers import pipeline
 
 
 class DistressDetector:

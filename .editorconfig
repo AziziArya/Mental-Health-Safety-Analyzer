@@ -1,0 +1,48 @@
+# Editor configuration file
+# Defines consistent coding styles across different editors
+
+
+root = true
+
+
+[*]
+
+# Use UTF-8 encoding
+charset = utf-8
+
+# Use Unix line endings
+end_of_line = lf
+
+# Remove trailing whitespace
+trim_trailing_whitespace = true
+
+# Ensure files end with a newline
+insert_final_newline = true
+
+
+[*.py]
+
+# Python indentation
+indent_style = space
+indent_size = 4
+
+
+[*.md]
+
+# Markdown files
+trim_trailing_whitespace = false
+
+
+[*.yml]
+indent_style = space
+indent_size = 2
+
+
+[*.yaml]
+indent_style = space
+indent_size = 2
+
+
+[*.json]
+indent_style = space
+indent_size = 2

@@ -1,6 +1,5 @@
 from src.report_generator.report import SafetyReportGenerator
 
-
 fusion_result = {
     "risk_level": "Critical Emergency",
     "final_risk_score": 0.7415,
@@ -13,8 +12,8 @@ fusion_result = {
         "Strong sadness detected (0.84)",
         "Elevated distress score (0.39)",
         "High crisis probability (0.92)",
-        "Explicit high-risk phrase: i don't want to live"
-    ]
+        "Explicit high-risk phrase: i don't want to live",
+    ],
 }
 
 

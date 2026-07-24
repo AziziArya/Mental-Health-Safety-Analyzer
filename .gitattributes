@@ -1,0 +1,33 @@
+# Normalize line endings
+* text=auto
+
+
+# Python files
+*.py text
+
+
+# Markdown documentation
+*.md text
+
+
+# Configuration files
+*.yml text
+*.yaml text
+*.json text
+
+
+# Ignore binary files from text normalization
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+
+
+# Model files
+*.pt binary
+*.pth binary
+*.onnx binary
+*.joblib binary
+*.pkl binary
