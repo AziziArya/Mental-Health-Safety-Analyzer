@@ -2,187 +2,245 @@
 
 ## Overview
 
-The current version of the Mental Health Safety Analyzer is a stable
-research prototype that demonstrates how artificial intelligence can
-support safer conversation analysis.
+The current version of the Mental Health Safety Analyzer is a research prototype that demonstrates how artificial intelligence can support safer conversation analysis.
 
-Future development focuses on improving accuracy, reliability,
-explainability, privacy protection, and real-world usability.
+Future development will focus on improving model performance, explainability, privacy protection, clinical usability, and real-world deployment while ensuring that AI remains a decision-support tool rather than a replacement for mental health professionals.
+
+------------------------------------------------------------------------
+
+# Clinical Integration Vision
+
+One of the primary long-term goals of this project is to support mental health professionals during the therapeutic process.
+
+Rather than replacing psychologists or psychiatrists, future versions aim to function as an AI-assisted clinical support system.
+
+In a possible deployment scenario:
+
+Patient
+
+↓
+
+AI Conversation Assistant
+
+↓
+
+Conversation Analysis
+
+↓
+
+Long-term Emotion & Risk Tracking
+
+↓
+
+Clinical Summary Report
+
+↓
+
+Psychologist
+
+The patient could interact with the system between therapy sessions.
+
+The AI would continuously analyze conversation patterns, emotional evolution, distress indicators, and crisis signals without making medical diagnoses.
+
+Before each therapy session, the psychologist would receive an explainable summary instead of reading hundreds of individual messages.
+
+Possible report contents:
+
+- Emotional trends over time
+- Risk level evolution
+- Important conversation events
+- High-risk sentences
+- Frequently repeated concerns
+- Explainable AI reasoning
+- Suggested discussion topics for the next session
+
+The final clinical decision would always remain under human supervision.
 
 ------------------------------------------------------------------------
 
 # Advanced AI Models
 
-Future versions can integrate more advanced language models and
-specialized safety models.
+Future versions can integrate more advanced language models and specialized safety models.
 
 Possible improvements:
 
--   Larger transformer-based models
--   Domain-specific mental health safety models
--   Fine-tuned models using high-quality datasets
--   Better context understanding across long conversations
+- Larger transformer-based models
+- Domain-specific mental health safety models
+- Fine-tuned models using high-quality datasets
+- Better long-context understanding
+- Continual learning techniques
 
 ------------------------------------------------------------------------
 
 # Multi-Model AI Fusion
 
-The system can be improved by combining multiple independent AI models.
+The system can be improved by combining multiple specialized AI models.
 
 Future architecture:
 
-    Emotion Model
+Emotion Model
 
-    +
++
 
-    Distress Model
+Distress Model
 
-    +
++
 
-    Crisis Model
+Crisis Model
 
-    +
++
 
-    Conversation Pattern Model
+Conversation Pattern Model
 
-            ↓
++
 
-    Decision Fusion Engine
+Context Memory
 
-            ↓
+↓
 
-    Final Safety Report
+Fusion Engine
+
+↓
+
+Final Decision
 
 Benefits:
 
--   Higher reliability
--   Better decision stability
--   Lower false alarms
+- Higher reliability
+- Better decision consistency
+- Reduced false positives
+- Better explainability
 
 ------------------------------------------------------------------------
 
-# Real-Time Monitoring Dashboard
+# Explainable AI
 
-A future version can include an interactive dashboard.
+Future versions will provide deeper explanations for every decision.
 
-Possible features:
+Possible improvements:
 
--   Risk level indicator
--   Emotion timeline
--   Confidence visualization
--   Crisis factor analysis
--   Conversation trend charts
--   Safety report generation
-
-------------------------------------------------------------------------
-
-# Better Explainable AI
-
-Future improvements can provide deeper explanations.
-
-Examples:
-
--   Highlight important sentences
--   Show detected emotional changes
--   Explain risk score calculation
--   Provide confidence reasoning
+- Sentence-level importance highlighting
+- Risk factor visualization
+- Emotion evolution explanation
+- Confidence estimation
+- Transparent Fusion Engine reasoning
 
 ------------------------------------------------------------------------
 
-# Privacy Improvements
+# Interactive Dashboard
 
-Future privacy enhancements:
+Future versions may include a modern interactive dashboard.
 
--   Advanced anonymization methods
--   Privacy-preserving machine learning
--   Secure data processing
--   Encrypted storage
--   Federated learning approaches
+Possible modules:
 
-------------------------------------------------------------------------
-
-# Fairness and Bias Evaluation
-
-Future versions should include stronger fairness testing.
-
-Evaluation areas:
-
--   Different writing styles
--   Different languages
--   Cultural differences
--   Age groups
--   Communication patterns
-
-The goal is to create a more reliable and unbiased safety system.
+- Conversation Viewer
+- Emotion Timeline
+- Risk Timeline
+- Crisis Indicators
+- Explainability Panel
+- Conversation Pattern Analysis
+- AI-generated Reports
 
 ------------------------------------------------------------------------
 
-# Larger Evaluation Framework
+# Privacy & Security
 
-Future evaluation improvements:
+Future privacy improvements include:
 
--   Larger benchmark datasets
--   Expert review
--   Real-world scenario testing
--   Continuous performance monitoring
--   Stress testing with difficult conversations
-
-------------------------------------------------------------------------
-
-# Human Feedback Integration
-
-A future system can include human feedback loops.
-
-Possible workflow:
-
-    AI Analysis
-
-    ↓
-
-    Human Review
-
-    ↓
-
-    Feedback Collection
-
-    ↓
-
-    Model Improvement
-
-This can improve system reliability over time.
+- Advanced anonymization
+- Privacy-preserving machine learning
+- Secure encrypted storage
+- Federated learning
+- Differential privacy techniques
 
 ------------------------------------------------------------------------
 
-# Deployment Improvements
+# Fairness & Bias Evaluation
 
-Future production features:
+Future research should include extensive fairness evaluation across:
 
--   Cloud deployment
--   Authentication system
--   Monitoring tools
--   Scalable API infrastructure
--   Secure enterprise integration
+- Different languages
+- Different cultures
+- Age groups
+- Writing styles
+- Communication patterns
 
-------------------------------------------------------------------------
-
-# Advanced Risk Prediction
-
-Future versions may support early warning prediction.
-
-The system could analyze:
-
--   Emotional deterioration trends
--   Increasing distress patterns
--   Sudden behavioral changes
--   Long-term conversation signals
+The objective is building a fair, reliable, and unbiased safety analysis system.
 
 ------------------------------------------------------------------------
 
-# Final Goal
+# Evaluation Framework
 
-The long-term goal is developing a responsible AI assistant that can
-analyze anonymous conversations, detect possible safety concerns,
-explain decisions, protect privacy, and support human decision-making.
+Future evaluation improvements include:
 
-The system is designed as a support tool, not a replacement for
-professional mental health care.
+- Larger benchmark datasets
+- Expert psychologist evaluation
+- Clinical validation
+- Longitudinal studies
+- Stress testing
+- Real-world deployment experiments
+
+------------------------------------------------------------------------
+
+# Human Feedback Loop
+
+Future versions may continuously improve using expert feedback.
+
+Workflow:
+
+AI Analysis
+
+↓
+
+Psychologist Review
+
+↓
+
+Feedback Collection
+
+↓
+
+Model Improvement
+
+This approach can gradually improve system performance while maintaining human oversight.
+
+------------------------------------------------------------------------
+
+# Deployment
+
+Future production features may include:
+
+- Cloud deployment
+- Authentication system
+- Secure API
+- Multi-user dashboard
+- Hospital integration
+- Clinical information systems integration
+
+------------------------------------------------------------------------
+
+# Early Risk Prediction
+
+Future versions may support proactive risk monitoring.
+
+Instead of only analyzing the current conversation, the system could identify:
+
+- Emotional deterioration
+- Increasing distress
+- Behavioral changes
+- Long-term conversation patterns
+- Escalating crisis probability
+
+This could help professionals identify potential problems earlier.
+
+------------------------------------------------------------------------
+
+# Long-Term Vision
+
+The long-term vision of this project is to build an explainable, privacy-preserving, AI-assisted mental health conversation safety platform.
+
+The platform is intended to help mental health professionals better understand conversation history, emotional evolution, and safety-related indicators while reducing the time required to review large amounts of text.
+
+At every stage, artificial intelligence serves only as a clinical decision-support system.
+
+Diagnosis, treatment, and all final decisions always remain the responsibility of qualified mental health professionals.

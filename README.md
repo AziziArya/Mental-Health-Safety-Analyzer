@@ -128,14 +128,29 @@ The goal is to support early risk identification while maintaining privacy and p
 
 ---
 
+# Future Clinical Vision
+
+Beyond conversation safety analysis, the architecture of this project has been designed with future clinical integration in mind.
+
+A possible future deployment scenario allows patients to interact with the AI assistant between therapy sessions while the system continuously analyzes emotional trends, distress progression, crisis indicators, and long-term conversation patterns.
+
+Instead of replacing psychologists, the platform is intended to generate explainable conversation summaries and safety reports that help mental health professionals better understand a patient's condition before each session.
+
+The final diagnosis, treatment decisions, and clinical responsibility always remain under human supervision.
+
+---
+
+
 # Limitations
 
 This system:
 
 - Does **not** provide medical diagnosis.
-- Does **not** replace psychologists or psychiatrists.
-- Should be used only as a decision-support tool.
-- Requires human review for medium and high-risk conversations.
+- Does **not** replace psychologists, psychiatrists, or licensed mental health professionals.
+- Is designed solely as an AI-assisted conversation safety analysis and decision-support tool.
+- Requires human review and professional judgment for medium and high-risk conversations.
+
+Future versions aim to support clinicians by providing explainable conversation summaries, emotional trend analysis, longitudinal risk monitoring, and AI-assisted clinical decision support while preserving privacy and ensuring that all final decisions remain under human supervision.
 
 ---
 
@@ -145,12 +160,12 @@ Current stable release:
 
 **v1.1.0**
 
-Latest improvements:
+Latest improvements include:
 
 - Improved CI/CD pipeline
 - Automated testing
 - Automated code quality checks
-- Comprehensive documentation
+- Comprehensive project documentation
 - GitHub Issue Templates
 - Pull Request Template
 - Contribution Guide
