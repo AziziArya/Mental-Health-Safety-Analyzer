@@ -1,94 +1,192 @@
 # Mental Health Safety Analyzer
 
-An AI-powered mental health conversation safety analysis system designed
-to detect emotional distress, crisis signals, conversation
-deterioration, and generate explainable safety decisions.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Release](https://img.shields.io/github/v/release/AziziArya/Mental-Health-Safety-Analyzer)
+![Tests](https://img.shields.io/badge/Tests-12%2F12-success)
+![Coverage](https://img.shields.io/badge/Coverage-80%25-brightgreen)
+![CI](https://github.com/AziziArya/Mental-Health-Safety-Analyzer/actions/workflows/tests.yml/badge.svg)
+![Code Quality](https://github.com/AziziArya/Mental-Health-Safety-Analyzer/actions/workflows/code_quality.yml/badge.svg)
 
-This research prototype focuses on privacy-aware AI assistance for
-mental health safety monitoring. It supports human review and does not
-replace professional mental health care.
+An AI-powered mental health conversation safety analysis system designed to detect emotional distress, crisis signals, conversation deterioration, and generate explainable safety decisions.
 
-## Documentation
+This research prototype focuses on privacy-aware AI assistance for mental health safety monitoring. It supports human review and **does not replace professional mental health care**.
 
-Detailed documentation is available in the `docs/` directory:
+---
 
--   architecture.md
--   pipeline.md
--   models_and_ai.md
--   privacy_and_safety.md
--   testing_and_evaluation.md
--   api_documentation.md
--   release_notes.md
--   future_improvements.md
+# Project Status
 
-## Main Capabilities
+Current development phase:
 
--   Emotion analysis
--   Distress detection
--   Crisis signal detection
--   Risk escalation analysis
--   Context fusion
--   Safety decision engine
--   Explainable AI reports
--   Privacy guard layer
--   Safety response generation
+- ✅ Backend Architecture
+- ✅ AI Pipeline
+- ✅ Automated Testing
+- ✅ Documentation
+- ✅ GitHub CI/CD
+- ⏳ UI / UX (In Progress)
+- ⏳ Interactive Demo (Coming Soon)
 
-## Installation
+---
 
-``` bash
+# Documentation
+
+Detailed documentation is available inside the **docs/** directory.
+
+- architecture.md
+- pipeline.md
+- models_and_ai.md
+- privacy_and_safety.md
+- testing_and_evaluation.md
+- api_documentation.md
+- release_notes.md
+- future_improvements.md
+
+---
+
+# Main Features
+
+- Emotion Analysis
+- Distress Detection
+- Crisis Detection
+- Conversation Pattern Analysis
+- Risk Escalation Detection
+- Context Memory
+- Context Fusion Engine
+- Safety Decision Engine
+- Explainable AI Reports
+- Privacy Guard
+- Safe Response Generation
+
+---
+
+# Installation
+
+```bash
 git clone https://github.com/AziziArya/Mental-Health-Safety-Analyzer.git
+
+cd Mental-Health-Safety-Analyzer
+
 pip install -r requirements.txt
 ```
 
-## Testing
+---
 
-Run:
+# Running Tests
 
-``` bash
+Run all tests using:
+
+```bash
 pytest -v
 ```
 
-Current status:
+Current testing status:
 
-    12/12 tests passed
-    Coverage: 80%
+- ✅ 12 / 12 Tests Passed
+- ✅ Approximately 80% Test Coverage
 
-## Technology Stack
+---
 
--   Python 3.10
--   FastAPI
--   PyTorch
--   TensorFlow
--   Transformers
--   Scikit-learn
--   Pandas
--   NumPy
--   SQLAlchemy
--   Pytest
+# Technology Stack
 
-## Limitations
+- Python 3.10
+- FastAPI
+- PyTorch
+- TensorFlow
+- Transformers
+- Scikit-learn
+- Pandas
+- NumPy
+- SQLAlchemy
+- PyTest
 
-This system: - Does not provide medical diagnosis. - Does not replace
-professional support. - Requires human review for high-risk cases.
+---
 
-## Release
+# System Architecture
+
+The project consists of multiple AI modules working together:
+
+- Emotion Analyzer
+- Distress Detector
+- Crisis Detector
+- Conversation Pattern Analyzer
+- Context Memory
+- Context Fusion Engine
+- Explainability Module
+- Privacy Guard
+- Safe Response Generator
+- Final Decision Engine
+
+The final risk assessment is produced by combining outputs from multiple analysis modules rather than relying on a single model.
+
+---
+
+# Research Focus
+
+This project investigates AI-assisted mental health conversation safety by combining multiple NLP analysis stages into a single explainable pipeline.
+
+The goal is to support early risk identification while maintaining privacy and providing transparent decision explanations.
+
+---
+
+# Limitations
+
+This system:
+
+- Does **not** provide medical diagnosis.
+- Does **not** replace psychologists or psychiatrists.
+- Should be used only as a decision-support tool.
+- Requires human review for medium and high-risk conversations.
+
+---
+
+# Release
 
 Current stable release:
 
-v1.0.0
+**v1.1.0**
 
-Included: - Complete AI safety analysis pipeline - Crisis detection -
-Conversation escalation detection - Context fusion - Explainable AI
-output - Automated safety response generation
+Latest improvements:
 
-## License
+- Improved CI/CD pipeline
+- Automated testing
+- Automated code quality checks
+- Comprehensive documentation
+- GitHub Issue Templates
+- Pull Request Template
+- Contribution Guide
+- Security Policy
+- Repository engineering improvements
 
-MIT License
+---
 
-Copyright (c) 2026 Arya Azizi
+# Repository
 
-## Author
+GitHub Repository
+
+https://github.com/AziziArya/Mental-Health-Safety-Analyzer
+
+Latest Release
+
+https://github.com/AziziArya/Mental-Health-Safety-Analyzer/releases
+
+---
+
+# Author
 
 Arya Azizi
 
-GitHub: https://github.com/AziziArya
+GitHub
+
+https://github.com/AziziArya
+
+Portfolio
+
+https://aryahub.ir
+
+---
+
+# License
+
+MIT License
+
+Copyright © 2026 Arya Azizi
